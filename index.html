@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lotus Flower</title>
+    <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        body
+        {
+            width: 100%;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-image: url(./background\ img.jpg);
+            background-size: 100% 600px ;
+            background-attachment: fixed;
+        }
+        #maindiv
+        {
+    
+            width: 100%;
+            height: 400px;
+            position: relative;
+            top: 320px;
+            background: transparent;
+            background-attachment: fixed;
+        }
+        .div
+        {
+            position: absolute;
+            top: 150px;
+            left: 370px;
+            border-radius: 1000px 0px 1000px 0px ;
+            width: 130px;
+            height: 130px;
+            transition: 4s;
+            border: 2px black solid;
+            background-attachment: fixed;
+            rotate: -45deg;
+            background-color: pink;
+        }
+        #c
+        {
+            width: 130px;
+            height: 130px;
+            z-index: 10;
+            rotate: -45deg;
+        }
+        #r1
+        {
+            
+            z-index: 6;
+        }
+        #r2
+        {
+            z-index: 4;
+            left: 400px;
+        }
+        #r3
+        {
+            z-index: 2;
+            left: 420px;
+        }
+        #l1
+        {
+            z-index: 5;
+            left: 373px;
+        }
+        #l2
+        {
+            z-index: 3;
+            left: 340px;
+        }
+        #l3
+        {
+            z-index: 1;
+            left: 320px;
+        }
+        .input
+        {
+            width: 100px;
+            border: 0px;
+            outline: 0px;
+            background: transparent;
+            font-size: 25px;
+            border-radius: 100px;
+        }
+        #sizediv
+        {
+           background-color: antiquewhite;
+           border: 2px black solid;
+           width: 204px;
+           position: absolute;
+           bottom: 25px;
+           left: 790px;
+           transition: border-radius 2s ,background-color 2s ;
+           z-index: 21;
+        }
+        #sizediv:hover
+        {
+            border-radius: 50px;
+            background-color: azure;
+        }
+        .input:active
+        {
+            color:blue;
+            background-color:red;
+        }
+        #circle
+        {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            position: absolute;
+            top: 210px;
+            left: 360px;
+            z-index: 9;
+            background-repeat: no-repeat;
+            background-image: url(./background\ img\ flower.jpg);
+            background-size: 150px 150px ;
+        }
+        #square
+        {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            border-radius: 100%;
+            position: absolute;
+            top: 210px;
+            left: 360px;
+            z-index: 11;
+            background-repeat: no-repeat;
+            background-size: 150px 150px ;
+            transition: 4s;
+        }
+        square2
+        {
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            position: absolute;
+            top: 320px;
+            left: 335px;
+            z-index: 11;
+            background-repeat: no-repeat;
+            background-image:url(./background\ img\ flower.jpg);
+            background-size: 150px 150px ;
+        }
+        #night
+        {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            bottom: 280px;
+            background-color: black;
+            z-index: 20;
+            opacity: 0.7;
+            transition: 3s;
+        }
+        #sun
+        {
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            border-radius: 100%;
+            box-shadow: 0px 0px 30px red;
+            z-index: 19;
+            position: relative;
+            bottom: 750px;
+            left: 30px;
+            opacity: 0.7;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="night"> </div>
+        <div id="sun"> </div>
+        <div id="c"  class="div"></div>
+        <div id="r1" class="div"></div>
+        <div id="r2" class="div"></div>
+        <div id="r3" class="div"></div>
+        <div id="l1" class="div"></div>
+        <div id="l2" class="div"></div>
+        <div id="l3" class="div"></div>
+        <div id="circle"></div>
+        <div id="square"></div>
+        <div id="square2"></div>
+    </div>
+    
+    <div id="sizediv">
+        <input type="button" value="Sunset" id="Sunset" class="input" onclick="Sunset()">
+        <input type="button" value="Sunrise" id="Sunrise" class="input" onclick="Sunrise()">
+    </div>
+    <script>
+        function Sunrise()
+        {
+                document.getElementById("r1").style.rotate="-15deg"
+                document.getElementById("r2").style.rotate="-15deg"
+                document.getElementById("r3").style.rotate="-10deg"
+                document.getElementById("l1").style.rotate="-75deg"
+                document.getElementById("l2").style.rotate="-75deg"
+                document.getElementById("l3").style.rotate="-85deg"
+                document.getElementById("night").style.opacity="0"
+                document.getElementById("sun").style.opacity="1"
+                document.getElementById("sun").style.backgroundColor="red"
+                document.getElementById("r1").style.backgroundColor="hotpink"
+                document.getElementById("r2").style.backgroundColor="hotpink"
+                document.getElementById("r3").style.backgroundColor="hotpink"
+                document.getElementById("l1").style.backgroundColor="hotpink"
+                document.getElementById("l2").style.backgroundColor="hotpink"
+                document.getElementById("l3").style.backgroundColor="hotpink"
+                document.getElementById("c").style.backgroundColor="hotpink"
+                document.getElementById("square").style.backgroundColor="hotpink"
+                
+        }
+        function Sunset()
+        {
+                document.getElementById("r1").style.rotate="-45deg"
+                document.getElementById("r2").style.rotate="-45deg"
+                document.getElementById("r3").style.rotate="-45deg"
+                document.getElementById("l1").style.rotate="-45deg"
+                document.getElementById("l2").style.rotate="-45deg"
+                document.getElementById("l3").style.rotate="-45deg"
+                document.getElementById("night").style.opacity="0.7"
+                document.getElementById("sun").style.opacity="0.7"
+                document.getElementById("sun").style.backgroundColor="white"
+                document.getElementById("r1").style.backgroundColor="pink"
+                document.getElementById("r2").style.backgroundColor="pink"
+                document.getElementById("r3").style.backgroundColor="pink"
+                document.getElementById("l1").style.backgroundColor="pink"
+                document.getElementById("l2").style.backgroundColor="pink"
+                document.getElementById("l3").style.backgroundColor="pink"
+                document.getElementById("c").style.backgroundColor="pink"
+                document.getElementById("square").style.backgroundColor="pink"
+        }
+    </script>
+</body>
+</html>
